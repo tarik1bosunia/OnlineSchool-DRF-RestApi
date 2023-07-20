@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # rest framework
+    'rest_framework',
+    'rest_framework_simplejwt',     # authentication
+
+    # custom apps
     'account'
 ]
 
@@ -144,3 +150,11 @@ PASSWORD_RESET_TIMEOUT = 900
 
 # To Use Custom User Model
 AUTH_USER_MODEL = 'account.User'
+
+# rest framework configuration
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
