@@ -140,3 +140,7 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_USE_TLS = True
 PASSWORD_RESET_TIMEOUT = 900
+
+
+# To Use Custom User Model
+AUTH_USER_MODEL = 'account.User'
